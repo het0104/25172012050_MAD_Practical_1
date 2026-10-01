@@ -3,7 +3,6 @@ open class Person(
     var lastName: String,
     var age: Int
 ) {
-
     constructor(firstName: String, lastName: String) : this(
         firstName,
         lastName,
@@ -18,7 +17,7 @@ class Student(
     var enrollmentNo: String,
     var branch: String,
     var className: String,
-    var labBatch: String
+    var labBatch: String  // <-- THIS WAS MISSING
 ) : Person(firstName, lastName, age) {
 
     constructor(firstName: String, lastName: String) : this(
@@ -37,15 +36,13 @@ class Student(
 }
 
 fun main() {
-
     val students = listOf(
-        Student("Raju", "Sah", 21, "24012011221", "Computer Engineering", "H", "1"),
+        Student("het", "patel", 21, "25172012050", "Computer Engineering", "H", "1"),
         Student("Bob", "Johnson", 21, "EN002", "Electrical Engineering", "B", "2"),
         Student("Charlie", "Brown", 19, "EN003", "Mechanical Engineering", "B", "1"),
         Student("David", "Lee", 22, "EN004", "Civil Engineering", "A", "3"),
         Student("Emily", "Davis", 20, "EN005", "Information Technology", "C", "4")
     )
-
     students.forEach {
         println(it)
     }
